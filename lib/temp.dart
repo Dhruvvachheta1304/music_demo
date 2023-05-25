@@ -20,7 +20,7 @@ class _tempState extends State<temp> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              "hello",
+              "hihihihihihihihi",
               style: TextStyle(
                 fontSize: 80,
               ),
