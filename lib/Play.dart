@@ -42,7 +42,7 @@ class _PlayState extends State<Play> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
-            "Now Playing",
+            "Now onplaying",
             style: TextStyle(fontSize: 25),
           ),
           centerTitle: true,
