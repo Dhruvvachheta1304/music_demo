@@ -5,10 +5,7 @@ import 'package:music_demo/singer.dart';
 class Play extends StatefulWidget {
   String? cover, songs, art;
 
-  Play({
-    required this.cover,
-    required this.songs,
-    required this.art});
+  Play({required this.cover, required this.songs, required this.art});
 
   @override
   State<Play> createState() => _PlayState();
@@ -20,29 +17,23 @@ class _PlayState extends State<Play> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery
-          .of(context)
-          .size
-          .height,
-      width: MediaQuery
-          .of(context)
-          .size
-          .width,
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomLeft,
               colors: [
-                Colors.indigo.shade800,
-                Colors.black12,
-              ])),
+            Colors.indigo.shade800,
+            Colors.black12,
+          ])),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
-            "Now onplaying",
+            "Now Playing",
             style: TextStyle(fontSize: 25),
           ),
           centerTitle: true,
@@ -54,10 +45,7 @@ class _PlayState extends State<Play> {
           child: Column(
             children: [
               SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.08,
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -76,14 +64,8 @@ class _PlayState extends State<Play> {
                         )
                       ],
                     ),
-                    height: MediaQuery
-                        .of(context)
-                        .size
-                        .height * 0.33,
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width * 0.74,
+                    height: MediaQuery.of(context).size.height * 0.33,
+                    width: MediaQuery.of(context).size.width * 0.74,
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
@@ -96,10 +78,7 @@ class _PlayState extends State<Play> {
                 ],
               ),
               SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.06,
+                height: MediaQuery.of(context).size.height * 0.06,
               ),
               Text(
                 widget.songs.toString(),
@@ -109,20 +88,16 @@ class _PlayState extends State<Play> {
                     color: Colors.white),
               ),
               SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.010,
+                height: MediaQuery.of(context).size.height * 0.010,
               ),
               GestureDetector(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              singer(
-                                  singername: widget.art.toString(),
-                                  img: widget.cover.toString()),
+                          builder: (context) => singer(
+                              singername: widget.art.toString(),
+                              img: widget.cover.toString()),
                         ));
                   },
                   child: Text(widget.art.toString(),
@@ -131,10 +106,7 @@ class _PlayState extends State<Play> {
                           fontWeight: FontWeight.w300,
                           color: Colors.white))),
               SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               Slider(
                 min: 0,
@@ -149,20 +121,11 @@ class _PlayState extends State<Play> {
                 },
               ),
               SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               Container(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.11,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width,
+                height: MediaQuery.of(context).size.height * 0.11,
+                width: MediaQuery.of(context).size.width,
                 color: Colors.transparent,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -198,10 +161,7 @@ class _PlayState extends State<Play> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.04,
+                height: MediaQuery.of(context).size.height * 0.04,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
